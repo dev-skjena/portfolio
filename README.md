@@ -2,7 +2,7 @@
 
 Welcome to the repository for my personal portfolio website! This is where I showcase my skills, projects, and a bit of my personality through jaw-dropping 3D animations, slick interactions, and fluid motion. If you're into creative web design, you're in the right place.
 
-![Portfolio Preview](https://github.com/Naresh-Khatri/Portfolio/blob/main/public/assets/projects-screenshots/portfolio/landing.png?raw=true)
+![Portfolio Preview](https://github.com/dev-skjena/portfolio/blob/main/public/assets/projects-screenshots/portfolio/landing.png?raw=true)
 
 ## 🔥 Features
 
@@ -30,13 +30,13 @@ Welcome to the repository for my personal portfolio website! This is where I sho
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Naresh-Khatri/Portfolio.git
+    git clone https://github.com/dev-skjena/portfolio.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd Portfolio
+    cd portfolio
     ```
 
 3. Install dependencies:

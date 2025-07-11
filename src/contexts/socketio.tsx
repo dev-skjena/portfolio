@@ -35,7 +35,6 @@ type SocketContextType = {
   users: UserMap;
   setUsers: Dispatch<SetStateAction<UserMap>>;
   msgs: Message[];
-  disconnect: () => void;
 };
 
 const INITIAL_STATE: SocketContextType = {
@@ -43,7 +42,6 @@ const INITIAL_STATE: SocketContextType = {
   users: new Map(),
   setUsers: () => {},
   msgs: [],
-  disconnect: () => {},
 };
 
 export const SocketContext = createContext<SocketContextType>(INITIAL_STATE);
@@ -54,36 +52,27 @@ const SocketContextProvider = ({ children }: { children: ReactNode }) => {
   const [msgs, setMsgs] = useState<Message[]>([]);
 
   // SETUP SOCKET.IO
-  useEffect(() => {
-    const username =  localStorage.getItem("username") || generateRandomCursor().name
-    const socket = io(process.env.NEXT_PUBLIC_WS_URL!, {
-      query: { username },
-      transports: ['websocket'],
-    });
-    setSocket(socket);
-    socket.on("connect", () => {});
-    socket.on("msgs-receive-init", (msgs) => {
-      setMsgs(msgs);
-    });
-    socket.on("msg-receive", (msgs) => {
-      setMsgs((p) => [...p, msgs]);
-    });
-    return () => {
-      socket.disconnect();
-    };
-  }, []);
-
-  const disconnect = () => {
-    if (socket) {
-      socket.disconnect();
-      setSocket(null);
-      setUsers(new Map());
-      setMsgs([]);
-    }
-  };
+  // useEffect(() => {
+  //   const username =  localStorage.getItem("username") || generateRandomCursor().name
+  //   const socket = io(process.env.NEXT_PUBLIC_WS_URL!, {
+  //     query: { username },
+  //     transports: ['websocket'],
+  //   });
+  //   setSocket(socket);
+  //   socket.on("connect", () => {});
+  //   socket.on("msgs-receive-init", (msgs) => {
+  //     setMsgs(msgs);
+  //   });
+  //   socket.on("msg-receive", (msgs) => {
+  //     setMsgs((p) => [...p, msgs]);
+  //   });
+  //   return () => {
+  //     socket.disconnect();
+  //   };
+  // }, []);
 
   return (
-    <SocketContext.Provider value={{ socket, users, setUsers, msgs, disconnect }}>
+    <SocketContext.Provider value={{ socket: socket, users, setUsers, msgs }}>
       {children}
     </SocketContext.Provider>
   );

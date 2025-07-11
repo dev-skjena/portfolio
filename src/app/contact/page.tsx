@@ -4,7 +4,6 @@ function Page() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    console.log(event)
   }
   return (
     <section>

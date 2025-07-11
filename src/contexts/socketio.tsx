@@ -56,6 +56,7 @@ const SocketContextProvider = ({ children }: { children: ReactNode }) => {
     const username =  localStorage.getItem("username") || generateRandomCursor().name
     const socket = io(process.env.NEXT_PUBLIC_WS_URL!, {
       query: { username },
+      transports: ['websocket'],
     });
     setSocket(socket);
     socket.on("connect", () => {});

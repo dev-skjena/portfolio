@@ -35,6 +35,7 @@ type SocketContextType = {
   users: UserMap;
   setUsers: Dispatch<SetStateAction<UserMap>>;
   msgs: Message[];
+  disconnect: () => void;
 };
 
 const INITIAL_STATE: SocketContextType = {
@@ -42,6 +43,7 @@ const INITIAL_STATE: SocketContextType = {
   users: new Map(),
   setUsers: () => {},
   msgs: [],
+  disconnect: () => {},
 };
 
 export const SocketContext = createContext<SocketContextType>(INITIAL_STATE);
@@ -71,8 +73,17 @@ const SocketContextProvider = ({ children }: { children: ReactNode }) => {
     };
   }, []);
 
+  const disconnect = () => {
+    if (socket) {
+      socket.disconnect();
+      setSocket(null);
+      setUsers(new Map());
+      setMsgs([]);
+    }
+  };
+
   return (
-    <SocketContext.Provider value={{ socket: socket, users, setUsers, msgs }}>
+    <SocketContext.Provider value={{ socket, users, setUsers, msgs, disconnect }}>
       {children}
     </SocketContext.Provider>
   );

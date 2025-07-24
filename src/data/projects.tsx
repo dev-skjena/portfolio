@@ -26,6 +26,10 @@ import {
   SiThreedotjs,
   SiTypescript,
   SiVuedotjs,
+  SiPhp,
+  SiLaravel,
+  SiPusher,
+  SiMysql
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 const BASE_PATH = "/assets/projects-screenshots";
@@ -222,6 +226,30 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <SiSupabase />,
   },
+  php: {
+    title: "PHP",
+    bg: "black",
+    fg: "white",
+    icon: <SiPhp />,
+  },
+  laravel: {
+    title: "Laravel",
+    bg: "black",
+    fg: "white",
+    icon: <SiLaravel />,
+  },
+  pusher: {
+    title: "Pusher",
+    bg: "black",
+    fg: "white",
+    icon: <SiPusher />,
+  },
+  mysql: {
+    title: "Mysql",
+    bg: "black",
+    fg: "white",
+    icon: <SiMysql />,
+  },
 };
 export type Project = {
   id: string;
@@ -253,8 +281,7 @@ const projects: Project[] = [
       backend: [
         PROJECT_SKILLS.node,
         PROJECT_SKILLS.express,
-        PROJECT_SKILLS.prisma,
-        PROJECT_SKILLS.postgres,
+        PROJECT_SKILLS.mongo,
         PROJECT_SKILLS.sockerio,
       ],
     },
@@ -312,11 +339,10 @@ const projects: Project[] = [
         PROJECT_SKILLS.framerMotion,
       ],
       backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.prisma,
+        PROJECT_SKILLS.php,
+        PROJECT_SKILLS.laravel,
         PROJECT_SKILLS.postgres,
-        PROJECT_SKILLS.firebase,
+        PROJECT_SKILLS.pusher,
       ],
     },
     get content() {
@@ -374,9 +400,8 @@ const projects: Project[] = [
         PROJECT_SKILLS.shadcn,
       ],
       backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.prisma,
+        PROJECT_SKILLS.php,
+        PROJECT_SKILLS.laravel,
         PROJECT_SKILLS.postgres,
         PROJECT_SKILLS.docker,
       ],
@@ -435,9 +460,8 @@ const projects: Project[] = [
       ],
       backend: [
         PROJECT_SKILLS.python,
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.prisma,
+        PROJECT_SKILLS.php,
+        PROJECT_SKILLS.laravel,
         PROJECT_SKILLS.postgres,
       ],
     },
@@ -496,10 +520,9 @@ const projects: Project[] = [
         PROJECT_SKILLS.shadcn,
       ],
       backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.prisma,
-        PROJECT_SKILLS.postgres,
+        PROJECT_SKILLS.php,
+        PROJECT_SKILLS.laravel,
+        PROJECT_SKILLS.mysql,
         PROJECT_SKILLS.docker,
       ],
     },

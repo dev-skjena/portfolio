@@ -236,120 +236,142 @@ export type Project = {
 };
 const projects: Project[] = [
   {
-    id: "codingducks",
-    category: "Coding platform",
-    title: "Coding Ducks",
-    src: "/assets/projects-screenshots/codingducks/landing.png",
-    screenshots: ["landing.png"],
+    id: "telemedicine",
+    category: "Healthcare",
+    title: "Telemedicine Platform",
+    src: "/assets/projects-screenshots/telemedicine/landing.png",
+    screenshots: ["landing.png", "consultation.png", "dashboard.png"],
+    live: "/projects/telemedicine",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
         PROJECT_SKILLS.next,
-        PROJECT_SKILLS.chakra,
-        PROJECT_SKILLS.reactQuery,
-        PROJECT_SKILLS.firebase,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.shadcn,
       ],
       backend: [
         PROJECT_SKILLS.node,
         PROJECT_SKILLS.express,
         PROJECT_SKILLS.prisma,
-        PROJECT_SKILLS.python,
         PROJECT_SKILLS.postgres,
         PROJECT_SKILLS.sockerio,
       ],
     },
-    live: "https://www.codingducks.xyz/",
-    github: "https://github.com/Naresh-Khatri/Coding-Ducks",
     get content() {
       return (
         <div>
-          <TypographyP className="font-mono text-2xl text-center">
-            Coding ducks = LeetCode + CodePen + CSS Battles
-          </TypographyP>
           <TypographyP className="font-mono ">
-            Coding Ducks is your coding dojo — where you level up your skills,
-            battle in real-time code duels, and earn badges like a true code
-            warrior. Track your progress, flex your brain, and climb the
-            leaderboard. Ready to quack the code?
+            A comprehensive healthcare platform connecting patients with doctors
+            through secure video consultations, appointment scheduling, and
+            digital prescriptions. Experience modern healthcare with seamless
+            virtual consultations and integrated health record management.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Problems </TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Video Consultations</TypographyH3>
           <p className="font-mono mb-2">
-            Solve coding problems similar to LeetCode, enhancing your
-            problem-solving skills across various languages.
+            Secure, high-quality video calls between patients and healthcare
+            providers with real-time chat and file sharing capabilities.
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/codingducks/problems.png`,
-              `${BASE_PATH}/codingducks/problem.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Ducklets</TypographyH3>
+          <SlideShow images={[`${BASE_PATH}/telemedicine/consultation.png`]} />
+          <TypographyH3 className="my-4 mt-8">Patient Dashboard</TypographyH3>
           <p className="font-mono mb-2">
-            Collaborate in real-time with others in a multiplayer coding
-            environment, just like CodePen but with a social twist.
+            Comprehensive patient portal for managing appointments, viewing
+            medical history, and accessing digital prescriptions.
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/codingducks/ducklets.png`,
-              `${BASE_PATH}/codingducks/ducklet1.png`,
-              `${BASE_PATH}/codingducks/ducklet2.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">UI Battles </TypographyH3>
-
+          <SlideShow images={[`${BASE_PATH}/telemedicine/dashboard.png`]} />
+          <TypographyH3 className="my-4 mt-8">
+            Digital Prescriptions
+          </TypographyH3>
           <p className="font-mono mb-2">
-            Challenge yourself to create UI components with HTML/CSS/JS, and get
-            instant feedback with an automated similarity scoring.
+            Electronic prescription system with pharmacy integration for
+            seamless medication management and delivery.
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/codingducks/css-battles.png`,
-              `${BASE_PATH}/codingducks/css-battle.png`,
-              `${BASE_PATH}/codingducks/css-battle2.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Contests </TypographyH3>
-          <p className="font-mono mb-2">
-            Organize or participate in coding competitions. Successfully used to
-            host three contests during college.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/codingducks/contests.png`]} />
-          <TypographyH3 className="my-4 mt-8">Playground </TypographyH3>
-          <p className="font-mono mb-2">
-            Test and execute your code instantly in my versatile online code
-            runner.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/codingducks/playground.png`]} />
-          <TypographyH3 className="my-4 mt-8">Users</TypographyH3>
-
-          <p className="font-mono mb-2">
-            Track your progress, earn badges, and climb the rankings with
-            detailed user profiles and activity tracking.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/codingducks/users.png`,
-              `${BASE_PATH}/codingducks/user.png`,
-            ]}
-          />
         </div>
       );
     },
   },
   {
-    id: "couponluxury",
-    category: "Coupon site",
-    title: "Coupon Luxury",
-    src: "/assets/projects-screenshots/couponluxury/landing.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png", "5.png"],
-    live: "https://www.couponluxury.com/",
+    id: "creatorhub",
+    category: "Content Management",
+    title: "CreatorHub Platform",
+    src: "/assets/projects-screenshots/creatorhub/landing.png",
+    screenshots: [
+      "landing.png",
+      "dashboard.png",
+      "analytics.png",
+      "monetization.png",
+    ],
+    live: "/projects/creatorhub",
     skills: {
       frontend: [
-        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.ts,
         PROJECT_SKILLS.next,
-        PROJECT_SKILLS.chakra,
-        PROJECT_SKILLS.vue,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.framerMotion,
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.prisma,
+        PROJECT_SKILLS.postgres,
+        PROJECT_SKILLS.firebase,
+      ],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Empowering content creators with a unified platform for managing
+            their digital presence. Features include content scheduling,
+            analytics dashboard, monetization tools, and community engagement
+            features. Build your brand and connect with your audience like never
+            before.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Content Scheduling</TypographyH3>
+          <p className="font-mono mb-2">
+            Plan and schedule your content across multiple platforms with our
+            intuitive calendar interface and automated posting.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/creatorhub/dashboard.png`]} />
+          <TypographyH3 className="my-4 mt-8">Analytics Dashboard</TypographyH3>
+          <p className="font-mono mb-2">
+            Track your performance with detailed analytics, engagement metrics,
+            and audience insights to optimize your content strategy.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/creatorhub/analytics.png`]} />
+          <TypographyH3 className="my-4 mt-8">Monetization Tools</TypographyH3>
+          <p className="font-mono mb-2">
+            Multiple revenue streams including subscriptions, donations,
+            merchandise integration, and sponsored content management.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/creatorhub/monetization.png`]} />
+        </div>
+      );
+    },
+  },
+  {
+    id: "eventmanagement",
+    category: "Event Planning",
+    title: "Event Management System",
+    src: "/assets/projects-screenshots/eventmanagement/landing.png",
+    screenshots: [
+      "landing.png",
+      "booking.png",
+      "guests.png",
+      "analytics.png",
+      "tickets.png",
+    ],
+    live: "/projects/eventmanagement",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.shadcn,
       ],
       backend: [
         PROJECT_SKILLS.node,
@@ -359,256 +381,125 @@ const projects: Project[] = [
         PROJECT_SKILLS.docker,
       ],
     },
-    get content(): JSX.Element {
+    get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            CouponLuxury is your go-to destination for snagging the best deals
-            without lifting a finger. Whether you&apos;re hunting for the latest
-            discounts or trying to save a buck at your favorite stores,
-            CouponLuxury&apos;s got you covered.
+            Streamline your event planning with our comprehensive management
+            system. From venue booking and guest management to ticketing and
+            real-time analytics, organize memorable events with ease. Perfect
+            for corporate events, weddings, and large-scale conferences.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <p className="font-mono mb-2 mt-4">
-            As soon as you land, boom! You&apos;re greeted with the freshest
-            coupons and top-tier deals that&apos;ll make your wallet happy.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/couponluxury/landing.png`]} />
-          <TypographyH3 className="my-4 ">Stores</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Venue Management</TypographyH3>
           <p className="font-mono mb-2">
-            Dive into a comprehensive list of stores, each packed with exclusive
-            deals and discounts. It&apos;s like having a VIP pass to every sale
-            in town.
+            Browse and book venues with detailed information, availability
+            calendars, and integrated payment processing.
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/couponluxury/stores.png`,
-              `${BASE_PATH}/couponluxury/store.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Categories</TypographyH3>
-
+          <SlideShow images={[`${BASE_PATH}/eventmanagement/booking.png`]} />
+          <TypographyH3 className="my-4 mt-8">Guest Management</TypographyH3>
           <p className="font-mono mb-2">
-            Whatever you&apos;re into—fashion, tech, food—you&apos;ll find it
-            neatly organized here. No more endless scrolling; just pick a
-            category and get the best offers instantly.
+            Comprehensive guest list management with RSVP tracking, dietary
+            preferences, and automated communication.
           </p>
-          <SlideShow images={[`${BASE_PATH}/couponluxury/categories.png`]} />
-          <TypographyH3 className="my-4 mt-8">Custom CMS </TypographyH3>
+          <SlideShow images={[`${BASE_PATH}/eventmanagement/guests.png`]} />
+          <TypographyH3 className="my-4 mt-8">Ticketing System</TypographyH3>
           <p className="font-mono mb-2">
-            Powered by Vue.js, this bad boy allows us to keep the content
-            dynamic and up-to-date. From flash sales to limited-time offers, my
-            CMS ensures everything&apos;s live and relevant.
+            Create and manage tickets with QR codes, different pricing tiers,
+            and real-time sales tracking.
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/couponluxury/cms-1.png`,
-              `${BASE_PATH}/couponluxury/cms-2.png`,
-            ]}
-          />
-          <p className="font-mono mb-2 mt-5">
-            Plus, I&apos;ve sprinkled in some extra magic like personalized
-            deal recommendations, user-friendly search features, and a sleek,
-            responsive design that works like a charm on any device.
-          </p>
+          <SlideShow images={[`${BASE_PATH}/eventmanagement/tickets.png`]} />
+          <TypographyH3 className="my-4 mt-8">Real-time Analytics</TypographyH3>
           <p className="font-mono mb-2">
-            CouponLuxury isn&apos;t just a website; it&apos;s your personal deal-hunting
-            assistant, ensuring you never miss out on a bargain!
+            Monitor event performance with live dashboards showing attendance,
+            revenue, and engagement metrics.
           </p>
-          {/* <TypographyP className="my-4 mt-8">
-          <strong>Misc:</strong>
-          Hosted not one, not two, but THREE coding contests (Codemacha) during
-          college. Safe to say, Coding Ducks passed the vibe check.
-        </TypographyP>
-        <TypographyP className="my-4 mt-8">
-          <strong>Target Audience:</strong>
-          For all the novice coders out there ready to make their mark.
-        </TypographyP> */}
+          <SlideShow images={[`${BASE_PATH}/eventmanagement/analytics.png`]} />
         </div>
       );
     },
   },
   {
-    id: "the-booking-desk",
-    category: "Travel",
-    title: "The Booking Desk",
-    src: "/assets/projects-screenshots/the-booking-desk/landing.png",
-    screenshots: ["1.png"],
-    live: "https://thebookingdesk.com/",
+    id: "attendance-ai",
+    category: "AI/HR Technology",
+    title: "Attendance Tracking System with AI Face Detection",
+    src: "/assets/projects-screenshots/attendance-ai/landing.png",
+    screenshots: ["landing.png", "facedetection.png", "dashboard.png"],
+    live: "/projects/attendance-ai",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
         PROJECT_SKILLS.next,
-        PROJECT_SKILLS.aceternity,
+        PROJECT_SKILLS.react,
         PROJECT_SKILLS.tailwind,
       ],
-      backend: [PROJECT_SKILLS.sanity],
+      backend: [
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.prisma,
+        PROJECT_SKILLS.postgres,
+      ],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            The Booking Desk is your ultimate travel consultation hub, designed
-            to turn your wanderlust dreams into reality. With a focus on smooth
-            and visually captivating animations, navigating the site feels like
-            a breeze—it&apos;s almost as if the destinations are calling you.
+            Revolutionary attendance management powered by AI facial recognition
+            technology. Eliminate buddy punching and ensure accurate time
+            tracking with real-time face detection, automated reporting, and
+            seamless integration with HR systems. The future of workforce
+            management.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <p className="font-mono mb-2 mt-8">
-            A sleek, modern interface greets you, featuring the latest travel
-            tips, deals, and must-visit spots around the globe.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/the-booking-desk/landing.png`]} />
-          <TypographyH3 className="my-4 mt-8">Blogs</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">AI Face Recognition</TypographyH3>
           <p className="font-mono mb-2">
-            Dive into the curated articles written by travel experts. Whether
-            you&apos;re looking for hidden gems or travel hacks, our blog section has
-            you covered.
+            Advanced facial recognition technology with 99.9% accuracy,
+            anti-spoofing measures, and real-time detection capabilities.
           </p>
           <SlideShow
-            images={[
-              `${BASE_PATH}/the-booking-desk/blogs.png`,
-              `${BASE_PATH}/the-booking-desk/blog.png`,
-            ]}
+            images={[`${BASE_PATH}/attendance-ai/facedetection.png`]}
           />
-          <TypographyH3 className="my-4 mt-8">Sanity CMS</TypographyH3>
-
+          <TypographyH3 className="my-4 mt-8">HR Dashboard</TypographyH3>
           <p className="font-mono mb-2">
-            Keeping everything fresh and up-to-date, I&apos;ve integrated Sanity CMS
-            to manage all the content with ease, ensuring you always get the
-            latest and greatest information.
+            Comprehensive dashboard for HR managers with attendance reports,
+            employee analytics, and automated payroll integration.
           </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/the-booking-desk/cms-1.png`,
-              `${BASE_PATH}/the-booking-desk/cms-2.png`,
-            ]}
-          />
-          <p className="font-mono mb-2 my-8">
-            With a stunning 100% score on Lighthouse, The Booking Desk isn&apos;t
-            just beautiful—it&apos;s built to perform. Whether you&apos;re planning your
-            next adventure or just daydreaming, our site delivers a top-notch
-            experience that&apos;s both informative and enjoyable.
+          <SlideShow images={[`${BASE_PATH}/attendance-ai/dashboard.png`]} />
+          <TypographyH3 className="my-4 mt-8">Security Features</TypographyH3>
+          <p className="font-mono mb-2">
+            Multi-layer security with encrypted data storage, audit trails, and
+            compliance with privacy regulations.
           </p>
         </div>
       );
     },
   },
   {
-    id: "portfolio",
-    category: "Portfolio",
-    title: "My Portfolio",
-    src: "/assets/projects-screenshots/portfolio/landing.png",
-    screenshots: ["1.png"],
-    live: "http://nareshkhatri.vercel.app",
-    github:"https://github.com/Naresh-Khatri/Portfolio",
+    id: "inventory",
+    category: "Business Management",
+    title: "Inventory Management System",
+    src: "/assets/projects-screenshots/inventory/landing.png",
+    screenshots: [
+      "landing.png",
+      "dashboard.png",
+      "analytics.png",
+      "suppliers.png",
+    ],
+    live: "/projects/inventory",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
         PROJECT_SKILLS.next,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
         PROJECT_SKILLS.shadcn,
-        PROJECT_SKILLS.aceternity,
-        PROJECT_SKILLS.framerMotion,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.spline,
       ],
-      backend: [],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Welcome to my digital playground, where creativity meets code in the
-            dopest way possible.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">
-            Beautiful 3D Objects{" "}
-          </TypographyH3>
-          <p className="font-mono mb-2">
-            Did you see that 3D keyboard modal? Yeah! I made that. That
-            interactive keyboard is being rendered in 3D on a webpage 🤯, and
-            pressing each keycap reveals a skill in a goofy way. It&apos;s like
-            typing, but make it art.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/portfolio/landing.png`,
-              `${BASE_PATH}/portfolio/skills.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 ">Space Theme</TypographyH3>
-          <p className="font-mono mb-2">
-            Dark background + floating particles = out-of-this-world cool.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/portfolio/navbar.png`]} />
-          <TypographyH3 className="my-4 mt-8">Projects</TypographyH3>
-
-          <p className="font-mono mb-2">
-            My top personal and freelance projects — no filler, all killer.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/portfolio/projects.png`,
-              `${BASE_PATH}/portfolio/project.png`,
-            ]}
-          />
-          <p className="font-mono mb-2 mt-8 text-center">
-            This site&apos;s not just a portfolio — it&apos;s a whole vibe.
-          </p>
-        </div>
-      );
-    },
-  },
-  {
-    id: "ghostchat",
-    category: "Anonymous chat",
-    title: "GhostChat",
-    src: "/assets/projects-screenshots/ghostchat/1.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png"],
-    live: "https://ghostchat.vercel.app",
-    github:"https://github.com/Naresh-Khatri/GhostChat",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.chakra],
-      backend: [PROJECT_SKILLS.supabase],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Ghostchat is your go-to spot for sending anonymous messages without
-            leaving a trace. Powered by Supabase, it&apos;s all about keeping things
-            low-key and secure. Whether you&apos;re sharing secrets, giving feedback,
-            or just having some fun, Ghostchat ensures your identity stays
-            hidden, while your voice is heard. Say what you want, without the
-            worry.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/ghostchat/1.png`,
-              `${BASE_PATH}/ghostchat/2.png`,
-              `${BASE_PATH}/ghostchat/3.png`,
-              `${BASE_PATH}/ghostchat/4.png`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  {
-    id: "jra",
-    category: "Result analyzer",
-    title: "JNTUA Results Analyzer",
-    src: "/assets/projects-screenshots/jra/1.png",
-    screenshots: ["1.png"],
-    live: "https://naresh-khatri.github.io/JNTUA-result-analyser-spa/#/",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.vue],
       backend: [
         PROJECT_SKILLS.node,
-        PROJECT_SKILLS.mongo,
         PROJECT_SKILLS.express,
+        PROJECT_SKILLS.prisma,
+        PROJECT_SKILLS.postgres,
         PROJECT_SKILLS.docker,
       ],
     },
@@ -616,83 +507,101 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            JNTUA Results Analyzer was a revolutionary tool designed to simplify
-            and enhance the experience of accessing academic results. It served
-            as a powerful proxy between the JNTUA university results website and
-            its users, offering a range of features that made result analysis
-            faster and more efficient. Here&apos;s what made it stand out:
+            Optimize your business operations with our intelligent inventory
+            management solution. Track stock levels, automate reordering, manage
+            suppliers, and generate detailed reports. Reduce costs and improve
+            efficiency with real-time inventory insights and predictive
+            analytics.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/jra/1.png`]} />
+          <TypographyH3 className="my-4 mt-8">Stock Management</TypographyH3>
+          <p className="font-mono mb-2">
+            Real-time stock tracking with low-stock alerts, batch tracking, and
+            automated reorder points for seamless inventory control.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/inventory/dashboard.png`]} />
+          <TypographyH3 className="my-4 mt-8">Supplier Management</TypographyH3>
+          <p className="font-mono mb-2">
+            Comprehensive supplier database with performance tracking, automated
+            purchase orders, and vendor comparison tools.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/inventory/suppliers.png`]} />
           <TypographyH3 className="my-4 mt-8">
-            Effortless Results Retrieval
+            Analytics & Reporting
           </TypographyH3>
-          {/* Effortless Results Retrieval: */}
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Search all your results using a single roll number, eliminating
-              the tedious task of sifting through thousands of rows on the
-              official site.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Class-Wise Results:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              class-wise results effortlessly by entering a roll number range.
-              No more manual searches or filtering.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Faculty Features:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Faculty members could download batch results in Excel format,
-              making administrative tasks a breeze.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">
-            Enhanced Data Insights:
-          </TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Each result came with additional features including:
-              <ul className="list-disc font-mono ml-6">
-                <li>
-                  <strong>CGPA Calculations: </strong>Easily track your
-                  cumulative grade point average.
-                </li>
-                <li>
-                  <strong>Charts:</strong> Visualize your academic performance
-                  with comprehensive charts.
-                </li>
-                <li>
-                  <strong>Future Projections:</strong> Get insights into
-                  potential future outcomes based on current performance.
-                </li>
-                <li>
-                  <strong> Backlog Counts: </strong>Keep track of your backlog
-                  subjects at a glance.
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Performance:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              The application was significantly faster and more efficient than
-              the official site, providing a smoother user experience.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Downfall:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Unfortunately, as of May 2022, the tool stopped working due to the
-              introduction of CAPTCHA on the official JNTUA results site, which
-              disrupted the seamless functionality of the app. JNTUA Results
-              Analyzer transformed the way students and faculty interacted with
-              academic results, making it a must-have tool until its unexpected
-              shutdown.
-            </li>
-          </ul>
+          <p className="font-mono mb-2">
+            Advanced analytics with sales forecasting, inventory turnover
+            reports, and cost optimization recommendations.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/inventory/analytics.png`]} />
+        </div>
+      );
+    },
+  },
+  {
+    id: "ecommerce",
+    category: "E-commerce",
+    title: "Ecommerce Platform",
+    src: "/assets/projects-screenshots/ecommerce/landing.png",
+    screenshots: [
+      "landing.png",
+      "products.png",
+      "checkout.png",
+      "admin.png",
+      "analytics.png",
+    ],
+    live: "/projects/ecommerce",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.framerMotion,
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.prisma,
+        PROJECT_SKILLS.postgres,
+        PROJECT_SKILLS.docker,
+      ],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            A full-featured ecommerce solution built for modern businesses.
+            Features include product catalog management, secure payment
+            processing, order tracking, customer reviews, and advanced
+            analytics. Scale your online business with our robust and
+            user-friendly platform.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Product Catalog</TypographyH3>
+          <p className="font-mono mb-2">
+            Advanced product management with categories, variants, inventory
+            tracking, and SEO optimization for better discoverability.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/ecommerce/products.png`]} />
+          <TypographyH3 className="my-4 mt-8">Secure Checkout</TypographyH3>
+          <p className="font-mono mb-2">
+            Streamlined checkout process with multiple payment gateways, guest
+            checkout, and abandoned cart recovery.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/ecommerce/checkout.png`]} />
+          <TypographyH3 className="my-4 mt-8">Admin Dashboard</TypographyH3>
+          <p className="font-mono mb-2">
+            Comprehensive admin panel for managing orders, customers, inventory,
+            and business analytics with intuitive controls.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/ecommerce/admin.png`]} />
+          <TypographyH3 className="my-4 mt-8">Business Analytics</TypographyH3>
+          <p className="font-mono mb-2">
+            Detailed sales reports, customer insights, and performance metrics
+            to help grow your business strategically.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/ecommerce/analytics.png`]} />
         </div>
       );
     },
